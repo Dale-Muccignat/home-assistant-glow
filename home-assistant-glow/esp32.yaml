@@ -40,7 +40,7 @@ esp32:
 packages:
   remote_package:
     url: https://github.com/Dale-Muccignat/home-assistant-glow/
-    ref: "4.1.1"
+    # ref: "latest"
     files:
       - components/basis.yaml
       - components/pulse_meter.yaml
