@@ -5,7 +5,6 @@
 # meter, useful if you do not have a serial port (P1).
 # © Klaas Schoute
 #
-
 substitutions:
   device_name: home-assistant-glow
   friendly_name: Home Assistant Glow
@@ -56,6 +55,8 @@ logger:
 improv_serial:
 
 wifi:
+  ap:
+    ssid: '${friendly_name}'
   # Set up a wifi access point
 
 # In combination with the `ap` this allows the user
