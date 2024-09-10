@@ -6,16 +6,16 @@
 # © Klaas Schoute
 #
 substitutions:
-  device_name: home-assistant-glow
-  friendly_name: Home Assistant Glow
+  device_name: beetle-home-assistant-glow
+  friendly_name: Beetle Home Assistant Glow
   project_version: "4.1.1"
   device_description: "Measure your energy consumption with the pulse LED on your smart meter - ESP32 Generic"
 
   # Define the GPIO pins
-  pulse_pin: GPIO1
-  status_led: GPIO5
-  led_pin_red: GPIO2
-  led_pin_green: GPIO4
+  pulse_pin: GPIO22
+  # status_led: GPIO5
+  # led_pin_red: GPIO2
+  # led_pin_green: GPIO4
 
 esphome:
   name: esp32c6-hidrophonics
@@ -43,8 +43,6 @@ packages:
     ref: "4.1.1"
     files:
       - components/basis.yaml
-      - components/updates.yaml
-      - components/status_led.yaml
       - components/pulse_meter.yaml
 
 # Enable logging
@@ -55,8 +53,6 @@ logger:
 improv_serial:
 
 wifi:
-  ap:
-    ssid: '${friendly_name}'
   # Set up a wifi access point
 
 # In combination with the `ap` this allows the user
