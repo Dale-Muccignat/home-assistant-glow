@@ -5,6 +5,7 @@
 # meter, useful if you do not have a serial port (P1).
 # © Klaas Schoute
 #
+
 substitutions:
   device_name: home-assistant-glow
   friendly_name: Home Assistant Glow
@@ -12,14 +13,14 @@ substitutions:
   device_description: "Measure your energy consumption with the pulse LED on your smart meter - ESP32 Generic"
 
   # Define the GPIO pins
-  pulse_pin: GPIO26
+  pulse_pin: GPIO1
   status_led: GPIO5
   led_pin_red: GPIO2
   led_pin_green: GPIO4
 
 esphome:
-  name: '${device_name}'
-  comment: '${device_description}'
+  name: esp32c6-hidrophonics
+  friendly_name: Beetle_home_assistant_glow
   name_add_mac_suffix: true
   min_version: 2024.6.0
   project:
@@ -34,8 +35,8 @@ esp32:
   variant: esp32c6
   framework:
     type: esp-idf
-    version: 5.1.2
-    platform_version: 6.5.0
+    version: 5.3.0
+    platform_version: 6.8.1
 
 packages:
   remote_package:
@@ -49,14 +50,13 @@ packages:
 
 # Enable logging
 logger:
+  level: VERBOSE
 
 # Allow provisioning Wi-Fi via serial
 improv_serial:
 
 wifi:
   # Set up a wifi access point
-  ap:
-    ssid: '${friendly_name}'
 
 # In combination with the `ap` this allows the user
 # to provision wifi credentials to the device via WiFi AP.
