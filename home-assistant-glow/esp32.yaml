@@ -24,7 +24,7 @@ esphome:
   name_add_mac_suffix: true
   min_version: 2024.6.0
   project:
-    name: "klaasnicolaas.home-assistant-glow"
+    name: "Dale-Muccignat.home-assistant-glow"
     version: "${project_version}"
 
 dashboard_import:
