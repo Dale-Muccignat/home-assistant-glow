@@ -22,6 +22,7 @@ esphome:
   friendly_name: Beetle_home_assistant_glow
   name_add_mac_suffix: true
   min_version: 2024.6.0
+  compile_process_limit: 1
   project:
     name: "Dale-Muccignat.home-assistant-glow"
     version: "${project_version}"
@@ -32,6 +33,7 @@ dashboard_import:
 esp32:
   board: esp32-c6-devkitc-1
   variant: esp32c6
+  flash_size: 2MB
   framework:
     type: esp-idf
     version: 5.3.0
@@ -47,7 +49,8 @@ packages:
 
 # Enable logging
 logger:
-  level: VERBOSE
+  level: NONE
+  baud_rate: 0
 
 # Allow provisioning Wi-Fi via serial
 improv_serial:
