@@ -54,8 +54,8 @@ packages:
 
 # Enable logging
 logger:
-  level: WARN
-  baud_rate: 460800
+  level: VERBOSE
+  baud_rate: 115200
 
 # Allow provisioning Wi-Fi via serial
 improv_serial:
