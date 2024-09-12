@@ -54,6 +54,8 @@ sensor:
     icon: mdi:flash-outline
     accuracy_decimals: 0
     pin: ${pulse_pin}
+    internal_filter: 200ms
+    internal_filter_mode: PULSE
     filters:
       # multiply value = (60 / imp value) * 1000
       # - multiply: 60
@@ -82,6 +84,7 @@ sensor:
     state_class: total_increasing
     device_class: energy
     accuracy_decimals: 3
+    method: left
     filters:
       # Multiplication factor from W to kW is 0.001
       - multiply: 0.001
