@@ -56,6 +56,7 @@ sensor:
     pin: ${pulse_pin}
     internal_filter: 200ms
     internal_filter_mode: PULSE
+    timeout: 45s
     filters:
       # multiply value = (60 / imp value) * 1000
       # - multiply: 60
